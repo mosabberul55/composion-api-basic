@@ -1,20 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import RefsForReactive from '../views/RefsForReactive.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: RefsForReactive
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
+  {
+    path: '/refs-vs-reactive',
+    name: 'refsVsReactive',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RefsVsReactive.vue')
+  },
+  {
+    path: '/computed-properties',
+    name: 'computedProperties',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ComputedProperties.vue')
+  },
+  {
+    path: '/watch-and-watch-effect',
+    name: 'watchAndWatchEffect',
+    component: () => import(/* webpackChunkName: "about" */ '../views/WatchAndWatchEffect.vue')
+  }
 ]
 
 const router = createRouter({
