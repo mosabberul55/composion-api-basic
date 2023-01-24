@@ -21,6 +21,16 @@ const routes = [
     path: '/watch-and-watch-effect',
     name: 'watchAndWatchEffect',
     component: () => import(/* webpackChunkName: "about" */ '../views/WatchAndWatchEffect.vue')
+  },
+  {
+    path: '/props-example',
+    name: 'propsExample',
+    component: () => import(/* webpackChunkName: "about" */ '../views/PropsExample.vue')
+  },
+  {
+    path: '/life-cycle-hook',
+    name: 'lifeCycleHook',
+    component: () => import(/* webpackChunkName: "about" */ '../views/LifeCycleHook.vue')
   }
 ]
 
