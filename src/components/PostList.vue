@@ -9,6 +9,7 @@
 
 <script>
 import SinglePost from "@/components/SinglePost.vue";
+import {onUnmounted} from "vue";
 
 export default {
   name: "PostList",
@@ -25,6 +26,10 @@ export default {
       console.log('emit received')
       context.emit("editPost", id);
     }
+
+    onUnmounted(() => {
+      console.log('component unmounted')
+    })
 
     return { posts, takeAction };
   },

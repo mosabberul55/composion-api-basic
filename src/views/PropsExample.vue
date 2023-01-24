@@ -2,7 +2,8 @@
   <div class="home">
     <h1>Props</h1>
     <button @click="addPost">Add Post</button>
-    <post-list :posts="posts" @editPost="edited" />
+    <post-list v-if="showPosts" :posts="posts" @editPost="edited" />
+    <button @click="toggle">Toggle Posts</button>
   </div>
 </template>
 
@@ -19,6 +20,10 @@ export default {
         { id: 2,title: "Post 2", body: "Post 2 body" },
         { id: 3,title: "Post 3", body: "Post 3 body" }
     ])
+    const showPosts = ref(true)
+    const toggle = () => {
+      showPosts.value = !showPosts.value
+    }
 
     const edited = (id) => {
       //find post with id
@@ -37,7 +42,7 @@ export default {
       posts.value.splice(foundIndex, 1)
     })
 
-    return { posts, addPost, edited }
+    return { posts, addPost, edited, toggle, showPosts }
   }
 }
 </script>

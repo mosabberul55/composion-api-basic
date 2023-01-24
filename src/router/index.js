@@ -31,6 +31,11 @@ const routes = [
     path: '/life-cycle-hook',
     name: 'lifeCycleHook',
     component: () => import(/* webpackChunkName: "about" */ '../views/LifeCycleHook.vue')
+  },
+  {
+    path: '/fetch-data-from-api',
+    name: 'fetchDataFromApi',
+    component: () => import(/* webpackChunkName: "about" */ '../views/FetchDataFromApi.vue')
   }
 ]
 

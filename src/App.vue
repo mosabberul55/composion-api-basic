@@ -5,7 +5,8 @@
     <router-link :to="{ name: 'computedProperties' }">Computed Properties</router-link> |
     <router-link :to="{ name: 'watchAndWatchEffect' }">Watch And Watch Effect</router-link> |
     <router-link :to="{ name: 'propsExample' }">Props Example</router-link> |
-    <router-link :to="{ name: 'lifeCycleHook' }">LifeCycleHook</router-link>
+    <router-link :to="{ name: 'lifeCycleHook' }">LifeCycleHook</router-link> |
+    <router-link :to="{ name: 'fetchDataFromApi' }">Fetch Data From Api</router-link>
   </nav>
   <router-view/>
 </template>
