@@ -36,6 +36,12 @@ const routes = [
     path: '/fetch-data-from-api',
     name: 'fetchDataFromApi',
     component: () => import(/* webpackChunkName: "about" */ '../views/FetchDataFromApi.vue')
+  },
+  {
+    path: '/fetch-data-from-api/:id',
+    name: 'fetchDataFromApiById',
+    component: () => import(/* webpackChunkName: "about" */ '../views/FetchDataFromApiById.vue'),
+    props: true
   }
 ]
 
