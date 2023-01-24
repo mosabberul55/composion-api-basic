@@ -1,4 +1,4 @@
-# blog-app
+# composion-api-basic
 
 ## Project setup
 ```
