@@ -3,6 +3,7 @@
     <div>
       <h2>{{ post.title }}</h2>
       <p>{{ formattedBody }}</p>
+      <button @click="editPost(post.id)">Edit Post</button>
     </div>
   </div>
 </template>
@@ -18,13 +19,16 @@ export default {
       required: true,
     },
   },
-  setup(props) {
+  setup(props, {emit}) {
     const post = props.post;
     const formattedBody = computed(() => {
       return post.body.toUpperCase();
     });
+    const editPost = (id) => {
+      emit("editPost", id);
+    };
 
-    return { post, formattedBody };
+    return { post, formattedBody, editPost };
   },
 }
 </script>

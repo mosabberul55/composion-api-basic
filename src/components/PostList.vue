@@ -2,7 +2,7 @@
   <div class="Post-list">
     <h1>Post Lists</h1>
     <div v-for="post in posts" :key="post.id">
-      <single-post :post="post" />
+      <single-post :post="post" @editPost="takeAction" />
     </div>
   </div>
 </template>
@@ -19,10 +19,14 @@ export default {
       required: true,
     },
   },
-  setup(props) {
+  setup(props, context) {
     const posts = props.posts
+    const takeAction = (id) => {
+      console.log('emit received')
+      context.emit("editPost", id);
+    }
 
-    return { posts };
+    return { posts, takeAction };
   },
 }
 </script>
