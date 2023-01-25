@@ -42,6 +42,11 @@ const routes = [
     name: 'fetchDataFromApiById',
     component: () => import(/* webpackChunkName: "about" */ '../views/FetchDataFromApiById.vue'),
     props: true
+  },
+  {
+    path: '/simple-crud',
+    name: 'simpleCrud',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SimpleCrud.vue'),
   }
 ]
 

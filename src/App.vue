@@ -6,7 +6,8 @@
     <router-link :to="{ name: 'watchAndWatchEffect' }">Watch And Watch Effect</router-link> |
     <router-link :to="{ name: 'propsExample' }">Props Example</router-link> |
     <router-link :to="{ name: 'lifeCycleHook' }">LifeCycleHook</router-link> |
-    <router-link :to="{ name: 'fetchDataFromApi' }">Fetch Data From Api</router-link>
+    <router-link :to="{ name: 'fetchDataFromApi' }">Fetch Data From Api</router-link> |
+    <router-link :to="{ name: 'simpleCrud' }">Simple CRUD</router-link>
   </nav>
   <router-view/>
 </template>
